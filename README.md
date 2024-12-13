@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+Курсова робота. Владислав Суражський ІР-25. 
+Варіант 18: 1) Візуалізація пошуку у глибину DFS у направленому ненавантаженому графі. Спосіб задання графу: Список суміжності.
+            2) Візуалізація операцій вставки, пошуку та видалення вузла у червоно-чорному дереві.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Інструкція:
 
-### `npm start`
+Запустити проект можна командою "npm start" у терміналі. Тоді перед вами відкриється домашня сторінка. На інші дві сторінки можна перейти або завдяки навігації, або через кнопки "Start".        
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Відкривши сторінку DFS, потрібно задати дані для побудови графу у вигляді списку суміжності в Input полі у лівому верхньому куті. 
+Приклад:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A: B, C, D                   1: 4, 3, 7
+B: A, H, K         або       2: 6, 1
+C: D, V, N                   3: 7
 
-### `npm run build`
+Початкова вершина встановлюється на найменшій по значенню введеній вершині, тобто A або 1, якщо дивитись на приклад.
+Щоб розпочати роботу алгоритму, натисніть на кнопку "Start DFS". Для паузи натисніть кнопку "Pause". Для кроку назад - кнопку "Back". Для скидання стану - кнопку "Reset". 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Під час обходу кожна відвідана вперше вершина буде замальовуватись зеленим кольором. Зліва ви зможете побачити, на якій вершині графа ви перебуваєте в даний момент, послідовність відвіданих вершин, як алгоритм вибирає напрямок руху (перевіряє на відвіданість кожну вершину зі стеку) і відфільтровані від наймешого значення до найбільшого відвідані вершини відповідно. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Відкривши сторінку RBT (RedBlackTree), ви можете побачити великий контейнер для малювання дерева і три кнопки. Щоб додати вузол до дерева - натисніть кнопку "Insert Node" та введіть будб-яке число. Щоб знайти вузол - нажміть на кнопку "Search Node" та введіть число того вузла, який бажаєте знайти. Щоб видалити вузол - нажміть на кнопку "Delete Node" і введіть число вузла, який ви хочете видалити із дерева. Балансування дерева (повороти, зміна кольорів) відбувається одразу.
